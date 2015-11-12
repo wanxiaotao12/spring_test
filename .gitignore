@@ -19,6 +19,7 @@ warn.log.*
 .build/
 .console/
 target/
+Spring_project.iml
 
 
 # Windows image file caches
