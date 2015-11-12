@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.support.SimpleInstantiationStrategy</OriginalElement>
+  <nodes>
+    <node x="201.0" y="0.0">java.lang.Object</node>
+    <node x="18.25" y="158.0">org.springframework.beans.factory.support.CglibSubclassingInstantiationStrategy</node>
+    <node x="0.0" y="0.0">org.springframework.beans.factory.support.InstantiationStrategy</node>
+    <node x="53.25" y="79.0">org.springframework.beans.factory.support.SimpleInstantiationStrategy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.beans.factory.support.SimpleInstantiationStrategy" target="org.springframework.beans.factory.support.InstantiationStrategy">
+      <point x="-55.75" y="-14.5" />
+      <point x="109.0" y="54.0" />
+      <point x="90.5" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.SimpleInstantiationStrategy" target="java.lang.Object">
+      <point x="55.75" y="-14.5" />
+      <point x="220.5" y="54.0" />
+      <point x="239.0" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.CglibSubclassingInstantiationStrategy" target="org.springframework.beans.factory.support.SimpleInstantiationStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="178.5" y="74.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

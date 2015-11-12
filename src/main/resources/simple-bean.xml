@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<bean id="simpleBeanImpl" class="com.spring.bean.test.SimpleBeanImpl">
+
+	  <property name="strValue" value="hello spring"></property>
+	  
+	  <property name="intValue" >
+	    <value>123</value>
+	  </property>
+	  
+	  <property name="listValue">
+	  <list>
+	    <value>list1</value>
+	    <value>list2</value> 
+	   </list>
+	  </property>
+	  
+	  <property name="setValue">
+	    <set>
+	      <value>set1</value>
+	      <value>set2</value>
+	    </set>
+	  </property>
+	  
+	  <property name="arrayValue">
+	    <list>
+	      <value>array1</value>
+	      <value>array2</value>
+	    </list>
+	  </property>
+	  
+	  <property name="mapValue">
+	    <map>
+	      <entry key="key1" value="value1" />
+	      <entry key="key2" value="value2" />
+	    </map>
+	  </property>
+	</bean>
+
+
+</beans>

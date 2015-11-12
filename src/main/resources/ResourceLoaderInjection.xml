@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+    <bean name="resourceLoader" class="org.springframework.core.io.DefaultResourceLoader"/>
+    <bean name="resourceLoaderInjection" class="com.resource.ResourceLoaderInjection">
+        <property name="resourceLoader" ref="resourceLoader"/>
+    </bean>
+
+    <bean name="resourceLoaderInjection2" class="com.resource.ResourceLoaderInjection2"/>
+
+    <bean name="resourceLoaderInjection3" class="com.resource.ResourceLoaderInjection3"/>
+
+
+    <bean name="resourceInjection" class="com.resource.ResourceInjection">
+        <property name="resource" value="ResourceLoaderInjection.xml"/>
+    </bean>
+
+    <bean name="resourceInjection2" class="com.resource.ResourceInjection2">
+        <property name="resources" value="*.xml"/>
+    </bean>
+
+
+</beans>

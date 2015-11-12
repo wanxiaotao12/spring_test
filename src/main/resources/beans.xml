@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+       <!-- 定义属性编辑器 -->
+    <bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="java.util.Date">
+                    <bean class="com.base.UtilDatePropertyEditor"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="noStaticFactory" class="com.spring.bean.NoStaticFactory">
+    </bean>
+
+    <bean id="bean34" factory-bean="noStaticFactory" factory-method="getBean3Instance"/>
+
+    <bean id="bean3" class="com.spring.bean.Bean3FactoryBean" />
+    <bean name="bean2" class="com.spring.bean.Bean2Impl"/>
+
+    <bean name="bean" class="com.spring.bean.BeanImpl" >
+
+        <property name="bean3" ref="bean3"/>
+        <!--<property name="utilDate" value="2008-08-08 12:20:30"/>-->
+        <property name="userName" value="${userName}"/>
+        <property name="age" value="456"/>
+        <property name="bean2" ref="bean2"/>
+    </bean>
+
+
+
+
+</beans>

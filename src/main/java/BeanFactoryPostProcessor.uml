@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.config.CustomEditorConfigurer</OriginalElement>
+  <nodes>
+    <node x="209.5462962962963" y="0.0">org.springframework.beans.factory.config.BeanFactoryPostProcessor</node>
+    <node x="273.5" y="160.0">org.springframework.beans.factory.config.PropertyOverrideConfigurer</node>
+    <node x="0.0" y="240.0">org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer</node>
+    <node x="9.546296296296305" y="0.0">org.springframework.core.io.support.PropertiesLoaderSupport</node>
+    <node x="41.5" y="160.0">org.springframework.beans.factory.config.PropertyPlaceholderConfigurer</node>
+    <node x="415.5462962962963" y="0.0">org.springframework.core.Ordered</node>
+    <node x="157.0462962962963" y="80.0">org.springframework.beans.factory.config.PropertyResourceConfigurer</node>
+    <node x="389.5462962962963" y="107.0">org.springframework.beans.factory.config.CustomEditorConfigurer</node>
+    <node x="521.5648148148148" y="0.0">org.springframework.beans.factory.BeanClassLoaderAware</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.beans.factory.config.CustomEditorConfigurer" target="org.springframework.beans.factory.BeanClassLoaderAware">
+      <point x="57.66666666666663" y="-15.0" />
+      <point x="534.7129629629629" y="60.0" />
+      <point x="605.5648148148148" y="60.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.PropertyResourceConfigurer" target="org.springframework.core.io.support.PropertiesLoaderSupport">
+      <point x="-66.0" y="-15.0" />
+      <point x="190.0462962962963" y="60.0" />
+      <point x="99.5462962962963" y="60.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.PropertyOverrideConfigurer" target="org.springframework.beans.factory.config.PropertyResourceConfigurer">
+      <point x="0.0" y="-15.0" />
+      <point x="371.0" y="135.0" />
+      <point x="305.5462962962963" y="135.0" />
+      <point x="49.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.CustomEditorConfigurer" target="org.springframework.beans.factory.config.BeanFactoryPostProcessor">
+      <point x="-57.66666666666663" y="-15.0" />
+      <point x="419.3796296296297" y="50.0" />
+      <point x="349.0462962962963" y="50.0" />
+      <point x="46.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer" target="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.PropertyResourceConfigurer" target="org.springframework.core.Ordered">
+      <point x="66.0" y="-15.0" />
+      <point x="322.0462962962963" y="60.0" />
+      <point x="436.0462962962963" y="60.0" />
+      <point x="-20.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.CustomEditorConfigurer" target="org.springframework.core.Ordered">
+      <point x="0.0" y="-15.0" />
+      <point x="20.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.PropertyResourceConfigurer" target="org.springframework.beans.factory.config.BeanFactoryPostProcessor">
+      <point x="0.0" y="-15.0" />
+      <point x="-46.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" target="org.springframework.beans.factory.config.PropertyResourceConfigurer">
+      <point x="0.0" y="-15.0" />
+      <point x="147.5" y="135.0" />
+      <point x="206.5462962962963" y="135.0" />
+      <point x="-49.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="306.5" y="128.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

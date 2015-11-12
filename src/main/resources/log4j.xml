@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='GBK' ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="CONSOLE-DEBUG" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%7r] %6p - %30.70c - %m \n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="DEBUG"/>
+        </filter>
+    </appender>
+
+
+
+    <appender name="MCMS_UTILS_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/Users/wanxiaotao/log4jtest/mcms-info.log"/>
+        <param name="append" value="true"/>
+        <!--<param name="encoding" value="UTF-8"/>-->
+        <!--<param name="threshold" value="info" />-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%7r] %6p - %30.70c - %m \n"/>
+        </layout>
+    </appender>
+
+
+    <logger name="com.service.impl.HelloServiceImpl" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="MCMS_UTILS_APPENDER" />
+    </logger>
+
+    <root>
+        <priority value="info"/>
+        <appender-ref ref="CONSOLE-DEBUG"/>
+    </root>
+</log4j:configuration>

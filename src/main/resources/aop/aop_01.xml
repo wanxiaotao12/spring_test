@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <bean name="helloService" class="com.service.impl.HelloServiceImpl" />
+
+    <bean id="aspect" class="com.aop.HelloWorldAspect"/>
+
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* com.service.impl.*.*(..))"/>
+        <aop:aspect ref="aspect">
+            <aop:before pointcut-ref="pointcut" method="before"/>
+            <!--<aop:after pointcut="execution(* com.service.impl.*.*(..))" method="after"/>-->
+            <aop:around pointcut-ref="pointcut" method="around"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
+
+
