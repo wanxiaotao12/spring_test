@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * hashCode 与 equals 两者方法的区别
  * Created by wanxiaotao on 12/11/15.
  */
 public class HashCodeEqualsTest {
