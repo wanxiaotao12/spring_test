@@ -1,0 +1,37 @@
+node_modules
+dist
+reports
+.tmp
+.svn
+.grunt
+.sass-cache
+app/bower_components
+.DS_Store
+*.iml
+*.ipr
+*.iws
+*.log
+console-info.log.*
+info.log.*
+error.log.*
+warn.log.*
+.idea/
+.build/
+.console/
+target/
+
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+#add ignore of aliyun-rds-tpl.js
+
+# add ignore of doc folder. For mock2easy, we just need database folder to generate docs with 'grunt' task
+doc/
