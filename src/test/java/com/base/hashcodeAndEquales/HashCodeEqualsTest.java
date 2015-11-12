@@ -38,6 +38,7 @@ public class HashCodeEqualsTest {
          * 判断hashCode对应的内存地址是否有对象，如果没有，直接添加；如果有，则将当前对象与内存中的对象equals方法比较，this: 当前对象，  obj：内存中的对象
          *
          * equals方法：如果返回true，则对象是重复，不添加；如果返回false，对象不重复，添加
+         *
          */
         persons.add(person1);
         persons.add(person2);
