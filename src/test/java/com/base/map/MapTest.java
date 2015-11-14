@@ -15,5 +15,25 @@ public class MapTest {
         map.put("key1", "value1");
 
         System.out.println(map);
+
+
+        int a = "key1".hashCode();
+        System.out.println(a);
+
+
+        int a1 = a >>> 12 ;
+        int a2 = a >>> 20;
+
+        int a3 = a1 ^ a2;
+
+        System.out.println(a1 + ", " + a2 + ", " + a3);
+
+
+        System.out.println(indexFor(17,16));
+
+    }
+
+    static int indexFor(int h, int length) {
+        return h & (length-1);
     }
 }
