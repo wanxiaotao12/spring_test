@@ -19,7 +19,7 @@ public class FileWrite {
      */
     @Test
     public void testWrite() throws Exception {
-        byte[] aa = "abcedfeg".toString().getBytes("UTF-8");
+        byte[] aa = "abcedfeg111".toString().getBytes("UTF-8");
 
         FileOutputStream outputStream = new FileOutputStream("velocity.txt");
         for (byte b : aa) {
@@ -115,6 +115,30 @@ public class FileWrite {
 
         printWriter.flush();
         printWriter.close();
+    }
+
+
+    @Test
+    public void test() {
+        try {
+            InputStream inputStream = new ByteArrayInputStream("12이윤 료신丽丽张123丽丽张123我是中国人".getBytes("UTF-8"));
+
+            InputStreamReader reader = new InputStreamReader(inputStream);
+
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                //对于windows下，rn这两个字符在一起时，表示一个换行。
+                //但如果这两个字符分开显示时，会换两次行。
+                //因此，屏蔽掉r，或者屏蔽n。否则，将会多出很多空行。
+                if (((char) tempchar) != 'r') {
+                    System.out.println((char) tempchar);
+                }
+            }
+            reader.close();
+
+        }catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
 
