@@ -18,9 +18,9 @@ public class ThreadBaseTest {
      *
      * 4、线main方法 主线程放在一个栈， 其他的非主线程放在新的栈
      *
-     * 5、Thread.yield()方法， 使用当前运行的线程回到【可运行】状态
+     * 5、Thread.yield()方法， 使用当前【运行】的线程停止， 回到【可运行】状态，(资源让给其他线程)
      *
-     * 6、t1.join()，保证当前线程停止执行，直到该线程所加入的线程(t1)完成为止
+     * 6、t1.join()，使当前线程停止执行，直到该线程所加入的线程(t1)完成为止
      *
      * 7、关于线程死锁，理论上可能发生， 但是实际不一定真的会发生
      */
@@ -75,6 +75,10 @@ public class ThreadBaseTest {
     }
 
 
+    /**
+     * ReentrantLock   可重入锁
+     * @throws InterruptedException
+     */
     @Test
     public void testLock() throws InterruptedException {
         LockTest lockTest = new LockTest();
