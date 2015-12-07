@@ -6,13 +6,16 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * 栅栏使用场景：多个线程都执行到某一点后， 再全部开始执行，如果部分线程到达某一点，则部分线程等待，
+ * 一组线程互相等待，直到到达某个公共屏障点， 然后同时执行
+ *
  * 我们称为【barrier】状态
  * 当某个线程调用await方法后，当前线程进入【barrier】状态
  *
  * 可重复使用：当所有线程都达到【barrier】状态， CyclicBarrier实例可以再次使用
  *
  * 参考：http://www.cnblogs.com/dolphin0520/p/3920397.html
+ *
+ * CyclicBarrier 也可以模拟：主线程等待子线程执行完毕后， 才能再执行
  * Created by wanxiaotao on 5/12/15.
  */
 public class CyclicBarrierTest {
