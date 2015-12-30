@@ -1,5 +1,6 @@
 package com.base.thread.model;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -8,6 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class LockTest implements Runnable {
     private Lock lock = new ReentrantLock();
+    private Condition condition =  lock.newCondition();
 
 
     private int num = 100;

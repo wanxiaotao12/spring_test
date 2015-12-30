@@ -74,7 +74,6 @@ public class ThreadBaseTest {
         lisi.start();
     }
 
-
     /**
      * ReentrantLock   可重入锁
      * @throws InterruptedException
