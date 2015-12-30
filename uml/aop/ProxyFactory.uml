@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.aop.framework.ProxyFactory</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">org.springframework.aop.TargetClassAware</node>
+    <node x="161.0" y="79.0">org.springframework.aop.framework.ProxyConfig</node>
+    <node x="78.25" y="158.0">org.springframework.aop.framework.AdvisedSupport</node>
+    <node x="87.25" y="316.0">org.springframework.aop.framework.ProxyFactory</node>
+    <node x="164.0" y="0.0">java.io.Serializable</node>
+    <node x="31.0" y="79.0">org.springframework.aop.framework.Advised</node>
+    <node x="62.75" y="237.0">org.springframework.aop.framework.ProxyCreatorSupport</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.aop.framework.ProxyFactory" target="org.springframework.aop.framework.ProxyCreatorSupport">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.Advised" target="org.springframework.aop.TargetClassAware">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.AdvisedSupport" target="org.springframework.aop.framework.ProxyConfig">
+      <point x="32.75" y="-14.5" />
+      <point x="176.5" y="133.0" />
+      <point x="215.5" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.ProxyCreatorSupport" target="org.springframework.aop.framework.AdvisedSupport">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.ProxyConfig" target="java.io.Serializable">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.AdvisedSupport" target="org.springframework.aop.framework.Advised">
+      <point x="-32.75" y="-14.5" />
+      <point x="111.0" y="133.0" />
+      <point x="72.0" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="148.0" y="252.5" />
+  <SelectedNodes>
+    <node>org.springframework.aop.framework.ProxyFactory</node>
+    <node>org.springframework.aop.framework.ProxyCreatorSupport</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.aop.framework.AdvisedSupport</OriginalElement>
+  <nodes>
+    <node x="126.0" y="0.0">org.springframework.aop.TargetClassAware</node>
+    <node x="0.0" y="79.0">org.springframework.aop.framework.ProxyConfig</node>
+    <node x="60.75" y="158.0">org.springframework.aop.framework.AdvisedSupport</node>
+    <node x="3.0" y="0.0">java.io.Serializable</node>
+    <node x="69.75" y="237.0">org.springframework.aop.framework.ProxyFactory</node>
+    <node x="157.0" y="79.0">org.springframework.aop.framework.Advised</node>
+    <node x="0.0" y="311.0">java.lang.SuppressWarnings</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.aop.framework.ProxyFactory" target="org.springframework.aop.framework.AdvisedSupport">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.Advised" target="org.springframework.aop.TargetClassAware">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.AdvisedSupport" target="org.springframework.aop.framework.ProxyConfig">
+      <point x="-32.75" y="-14.5" />
+      <point x="93.5" y="133.0" />
+      <point x="54.5" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.ProxyConfig" target="java.io.Serializable">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.framework.AdvisedSupport" target="org.springframework.aop.framework.Advised">
+      <point x="32.75" y="-14.5" />
+      <point x="159.0" y="133.0" />
+      <point x="198.0" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="203.0" y="214.0" />
+  <SelectedNodes>
+    <node>org.springframework.aop.framework.AdvisedSupport</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

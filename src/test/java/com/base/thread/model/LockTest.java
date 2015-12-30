@@ -13,6 +13,7 @@ public class LockTest implements Runnable {
 
 
     private int num = 100;
+
     @Override
     public void run() {
         lock.lock();

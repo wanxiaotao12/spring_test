@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.aop.support.DefaultPointcutAdvisor</OriginalElement>
+  <nodes>
+    <node x="319.5" y="79.0">org.springframework.aop.PointcutAdvisor</node>
+    <node x="273.0" y="316.0">org.springframework.aop.support.RegexpMethodPointcutAdvisor</node>
+    <node x="284.09090909090907" y="158.0">org.springframework.aop.support.AbstractPointcutAdvisor</node>
+    <node x="0.0" y="316.0">org.springframework.aop.support.NameMatchMethodPointcutAdvisor</node>
+    <node x="345.5" y="0.0">org.springframework.aop.Advisor</node>
+    <node x="217.5" y="79.0">org.springframework.core.Ordered</node>
+    <node x="518.0" y="316.0">org.springframework.aop.support.DefaultPointcutAdvisor</node>
+    <node x="574.25" y="79.0">java.io.Serializable</node>
+    <node x="260.59090909090907" y="237.0">org.springframework.aop.support.AbstractGenericPointcutAdvisor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.aop.support.AbstractPointcutAdvisor" target="org.springframework.core.Ordered">
+      <point x="-61.66666666666663" y="-14.5" />
+      <point x="314.92424242424244" y="133.0" />
+      <point x="258.5" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.DefaultPointcutAdvisor" target="java.io.Serializable">
+      <point x="44.5" y="-14.5" />
+      <point x="25.75" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.AbstractPointcutAdvisor" target="org.springframework.aop.PointcutAdvisor">
+      <point x="0.0" y="-14.5" />
+      <point x="376.59090909090907" y="133.0" />
+      <point x="385.5" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.NameMatchMethodPointcutAdvisor" target="org.springframework.aop.support.AbstractGenericPointcutAdvisor">
+      <point x="0.0" y="-14.5" />
+      <point x="126.5" y="291.0" />
+      <point x="299.25757575757575" y="291.0" />
+      <point x="-77.33333333333331" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.DefaultPointcutAdvisor" target="org.springframework.aop.support.AbstractGenericPointcutAdvisor">
+      <point x="-44.5" y="-14.5" />
+      <point x="562.5" y="291.0" />
+      <point x="453.9242424242424" y="291.0" />
+      <point x="77.33333333333331" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.PointcutAdvisor" target="org.springframework.aop.Advisor">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.AbstractGenericPointcutAdvisor" target="org.springframework.aop.support.AbstractPointcutAdvisor">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.AbstractPointcutAdvisor" target="java.io.Serializable">
+      <point x="61.666666666666686" y="-14.5" />
+      <point x="438.25757575757575" y="133.0" />
+      <point x="600.0" y="133.0" />
+      <point x="-25.75" y="14.5" />
+    </edge>
+    <edge source="org.springframework.aop.support.RegexpMethodPointcutAdvisor" target="org.springframework.aop.support.AbstractGenericPointcutAdvisor">
+      <point x="0.0" y="-14.5" />
+      <point x="385.5" y="291.0" />
+      <point x="376.59090909090907" y="291.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="243.5" y="220.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
