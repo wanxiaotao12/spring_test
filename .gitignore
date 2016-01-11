@@ -1,12 +1,3 @@
-node_modules
-dist
-reports
-.tmp
-.svn
-.grunt
-.sass-cache
-app/bower_components
-.DS_Store
 *.iml
 *.ipr
 *.iws
@@ -19,7 +10,6 @@ warn.log.*
 .build/
 .console/
 target/
-Spring_project.iml
 
 
 # Windows image file caches
