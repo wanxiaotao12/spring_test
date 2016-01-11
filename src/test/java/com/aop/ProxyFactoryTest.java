@@ -22,15 +22,20 @@ public class ProxyFactoryTest {
 	public static void main(String[] args) {
 		UserService userService = new UserServiceImpl();
 
-		ProxyFactory proxyFactory = new ProxyFactory();
-		proxyFactory.setTarget(userService);
-		proxyFactory.setInterfaces(new Class[]{UserService.class});
 		NameMatchMethodPointcutAdvisor advisor = new NameMatchMethodPointcutAdvisor();
 		advisor.setMappedName("addUser");
 		advisor.setAdvice(new CheckInterceptor());
 
+
+		ProxyFactory proxyFactory = new ProxyFactory();
+		proxyFactory.setTarget(userService);
+//		proxyFactory.setInterfaces(new Class[]{UserService.class});
+
+
+		//设置advisor
 		proxyFactory.addAdvisor(advisor);
 
+		//获取代理类
 		UserService userServiceProxy = (UserService)proxyFactory.getProxy();
 		userServiceProxy.addUser();
 
