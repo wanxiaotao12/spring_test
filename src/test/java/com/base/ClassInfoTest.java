@@ -15,14 +15,14 @@ import java.lang.reflect.*;
 public class ClassInfoTest {
 
     /**
-     * é€šè¿‡æ„é€ æ–¹æ³•åå°„ï¼Œ è·å–å¯¹è±¡å®ä¾‹
+     * Í¨¹ı¹¹Ôì·½·¨·´Éä£¬ »ñÈ¡¶ÔÏóÊµÀı
      */
     @org.junit.Test
     public void test() {
         try {
-            System.out.println("æˆ‘æ˜¯è¦æ— å¯å¥ˆä½•");
+            System.out.println("ÎÒÊÇÒªÎŞ¿ÉÄÎºÎ");
             Constructor constructor = SimpleBeanImpl.class.getDeclaredConstructor();
-            //è®¾ç½®æ„é€ æ–¹æ³•å¯ç”¨çš„ï¼Œä»¥é˜²æ­¢æ„é€ æ–¹æ³•æ˜¯private
+            //ÉèÖÃ¹¹Ôì·½·¨¿ÉÓÃµÄ£¬ÒÔ·ÀÖ¹¹¹Ôì·½·¨ÊÇprivate
             constructor.setAccessible(true);
             SimpleBean simpleBean = (SimpleBean) constructor.newInstance();
             simpleBean.sayHi();
@@ -33,7 +33,7 @@ public class ClassInfoTest {
     }
 
     /**
-     * é€šè¿‡å†…çœè·å–Classä¿¡æ¯
+     * Í¨¹ıÄÚÊ¡»ñÈ¡ClassĞÅÏ¢
      */
     @org.junit.Test
     public void testClassInfo() {
@@ -51,7 +51,7 @@ public class ClassInfoTest {
             Field[] fields = clazz.getDeclaredFields();
             for (int i = 0; i < fields.length; i++) {
                 fields[i].setAccessible(true);
-//                fields[i].set(bean, "wan");
+                //                fields[i].set(bean, "wan");
                 System.out.println(fields[i].getName());
             }
             BeanInfo beanInfo = Introspector.getBeanInfo(clazz);

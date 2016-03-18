@@ -10,7 +10,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 /**
- * JavaBeanç±»ä¿¡æ¯è¯»å– Created by xiaotao.wxt on 2014/8/8.
+ * JavaBeanÀàĞÅÏ¢¶ÁÈ¡ Created by xiaotao.wxt on 2014/8/8.
  */
 public class BeanProperty {
     @Test
@@ -28,16 +28,16 @@ public class BeanProperty {
             for (int i = 0; i < propertyDescriptors.length; i++) {
                 System.out.println("--------------");
                 PropertyDescriptor propertyDescriptor = propertyDescriptors[i];
-                System.out.println("å±æ€§åï¼š" + propertyDescriptor.getName());
-                System.out.println("setæ–¹æ³•ï¼š" + propertyDescriptor.getWriteMethod());
+                System.out.println("ÊôĞÔÃû£º" + propertyDescriptor.getName());
+                System.out.println("set·½·¨£º" + propertyDescriptor.getWriteMethod());
                 Method getMethod = propertyDescriptor.getReadMethod();
-                System.out.println("getæ–¹æ³•åï¼š" + getMethod);
+                System.out.println("get·½·¨Ãû£º" + getMethod);
                 if (getMethod != null) {
-                    //å±æ€§çš„ç±»å‹
+                    //ÊôĞÔµÄÀàĞÍ
                     Class propertyClazz = getMethod.getReturnType();
-                    System.out.println("å±æ€§ç±»å‹ï¼š" + propertyClazz);
-                    //æ‰§è¡Œgetæ–¹æ³•
-                    System.out.println(propertyDescriptor.getName() + "å€¼ï¼š" + getMethod.invoke(simpleBeanImpl));
+                    System.out.println("ÊôĞÔÀàĞÍ£º" + propertyClazz);
+                    //Ö´ĞĞget·½·¨
+                    System.out.println(propertyDescriptor.getName() + "Öµ£º" + getMethod.invoke(simpleBeanImpl));
                 }
             }
         } catch (Exception ex) {
@@ -55,10 +55,10 @@ public class BeanProperty {
             PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
             for (int i = 0; i < propertyDescriptors.length; i++) {
                 PropertyDescriptor propertyDescriptor = propertyDescriptors[i];
-                System.out.println("å±æ€§åï¼š" + propertyDescriptor.getName());
-                System.out.println("setæ–¹æ³•ï¼š" + propertyDescriptor.getWriteMethod());
+                System.out.println("ÊôĞÔÃû£º" + propertyDescriptor.getName());
+                System.out.println("set·½·¨£º" + propertyDescriptor.getWriteMethod());
                 Method getMethod = propertyDescriptor.getReadMethod();
-                System.out.println("getæ–¹æ³•åï¼š" + getMethod);
+                System.out.println("get·½·¨Ãû£º" + getMethod);
             }
         } catch (Exception ex) {
             ex.printStackTrace();

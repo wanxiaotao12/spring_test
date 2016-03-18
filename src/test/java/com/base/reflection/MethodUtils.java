@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * ç¬¬ä¸‰æ–¹æ¥å£
+ * µÚÈı·½½Ó¿Ú
  * Created by wanxiaotao on 15/10/16.
  */
 public class MethodUtils {
@@ -30,11 +30,11 @@ public class MethodUtils {
             result = (T)method.invoke(instance, params);
 
             if (result == null) {
-                logger.error("callRemoteInterface errorï¼šreturn value is null, " + getMethodInfo(method, params));
+                logger.error("callRemoteInterface error£ºreturn value is null, " + getMethodInfo(method, params));
             } else {
                 logger.info("callRemoteInterface " + getMethodInfo(method, params) + ", result =" + JSON.toJSONString(result));
 
-                //åˆ¤æ–­è¿”å›æ•°æ®ä¸­çš„å±æ€§å€¼æ˜¯å¦æˆåŠŸ
+                //ÅĞ¶Ï·µ»ØÊı¾İÖĞµÄÊôĞÔÖµÊÇ·ñ³É¹¦
                 Class returnClass = method.getReturnType();
                 Method successMethod = returnClass.getMethod("isSuccess");
                 boolean successResult = (Boolean) successMethod.invoke(result);
@@ -85,7 +85,7 @@ public class MethodUtils {
     }
 
     private static String getClassMethod(String className,String methodName){
-       return className+"."+methodName;
+        return className+"."+methodName;
     }
 
 
@@ -94,7 +94,7 @@ public class MethodUtils {
     }
 
     public void add2() {
-      System.out.println("*****add2()*****");
+        System.out.println("*****add2()*****");
     }
 
     public String add3(String str) {
@@ -123,7 +123,6 @@ public class MethodUtils {
         Object obj3 = method3.invoke(methodUtils,"abc");
 
         System.out.println("obj3="+ obj3);
-
     }
 
 }

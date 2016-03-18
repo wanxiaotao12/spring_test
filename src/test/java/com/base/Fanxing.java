@@ -14,12 +14,12 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * èŽ·å–æ³›åž‹çš„ç±»åž‹
+ * »ñÈ¡·ºÐÍµÄÀàÐÍ
  * Created by xiaotao.wxt on 2014/8/12.
  */
 public class Fanxing {
     /**
-     * èŽ·å–ç±»å±žæ€§ä¸ºæ³›åž‹çš„ç±»åž‹
+     * »ñÈ¡ÀàÊôÐÔÎª·ºÐÍµÄÀàÐÍ
      */
     @Test
     public void getFanxingType() {
@@ -31,13 +31,13 @@ public class Fanxing {
                 System.out.println("-----------------------------------------");
                 Class propertyClass = propertyDescriptor.getPropertyType();
 
-                System.out.println("å±žæ€§ç±»åž‹ï¼š" + propertyClass);
+                System.out.println("ÊôÐÔÀàÐÍ£º" + propertyClass);
                 Type type = propertyDescriptor.getReadMethod().getGenericReturnType();
                 System.out.println("type:" + type);
                 if (type instanceof ParameterizedType) {
                     Type[] types = ((ParameterizedType) type).getActualTypeArguments();
                     if (types != null && types.length > 0) {
-                        System.out.println("æ³›åž‹çš„ç±»åž‹:" + types[0]);
+                        System.out.println("·ºÐÍµÄÀàÐÍ:" + types[0]);
                     }
                 }
             }
@@ -65,7 +65,7 @@ public class Fanxing {
             if (listType instanceof ParameterizedType) {
                 Type[] types = ((ParameterizedType) listType).getActualTypeArguments();
                 if (types != null && types.length > 0) {
-                    System.out.println("æ³›åž‹çš„ç±»åž‹:" + types[0]);
+                    System.out.println("·ºÐÍµÄÀàÐÍ:" + types[0]);
                 }
             }
 

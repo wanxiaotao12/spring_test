@@ -20,11 +20,11 @@ public class BaseTest {
     public static  void setUp() throws Exception {
         try {
             long start = System.currentTimeMillis();
-            System.out.println("æ­£åœ¨åŠ è½½é…ç½®æ–‡ä»¶...");
+            System.out.println("ÕıÔÚ¼ÓÔØÅäÖÃÎÄ¼ş...");
 
             appContext =  new ClassPathXmlApplicationContext(new String[]{"simple-bean2.xml"});
 
-            System.out.println("é…ç½®æ–‡ä»¶åŠ è½½å®Œæ¯•,è€—æ—¶ï¼š" + (System.currentTimeMillis() - start));
+            System.out.println("ÅäÖÃÎÄ¼ş¼ÓÔØÍê±Ï,ºÄÊ±£º" + (System.currentTimeMillis() - start));
         } catch (Exception e) {
             e.printStackTrace();
         }

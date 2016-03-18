@@ -13,24 +13,24 @@ public class ImageTest {
     @Test
     public void test() throws Exception{
         File file = new File("d:/iofile/test.png");
-        FileInputStream fis = new FileInputStream(file); //åˆ›å»ºä¸€ä¸ªè¾“å…¥æµ
-        //åˆ›å»ºä¸€ä¸ªè¾“å‡ºæµï¼Œåé¢ä¸€ä¸ªå‚æ•°trueè¡¨ç¤ºè¿½åŠ ï¼ŒåŸæœ‰å†…å®¹ä¸ä¼šè¢«æ¸…é™¤,é»˜è®¤ä¸ºfalse
+        FileInputStream fis = new FileInputStream(file); //´´½¨Ò»¸öÊäÈëÁ÷
+        //´´½¨Ò»¸öÊä³öÁ÷£¬ºóÃæÒ»¸ö²ÎÊıtrue±íÊ¾×·¼Ó£¬Ô­ÓĞÄÚÈİ²»»á±»Çå³ı,Ä¬ÈÏÎªfalse
         FileOutputStream fos = new FileOutputStream("d:/iofile/test2.png",false);
         int ch = 0;
-        //æ–¹å¼ä¸€
+        //·½Ê½Ò»
         /*while((ch=fis.read()) != -1){
             fos.write(ch);
         }*/
-        //æ–¹å¼äºŒ
+        //·½Ê½¶ş
         byte[] b = new byte[1024];
         while((ch=fis.read(b)) != -1){
             fos.write(b,0,ch);
         }
-        //æ–¹å¼ä¸‰
-//        byte[] b = new byte[fis.available()];
-//        fis.read(b); //é¦–å…ˆæŠŠfisçš„å†…å®¹è¯»åˆ°å­—èŠ‚æ•°ç»„bé‡Œé¢
-//        fos.write(b);//å†æŠŠå­—èŠ‚æ•°ç»„bçš„å†…å®¹é€šè¿‡è¾“å‡ºæµå†™åˆ°æŒ‡å®šæ–‡ä»¶
-        //å…³é—­æµ
+        //·½Ê½Èı
+        //        byte[] b = new byte[fis.available()];
+        //        fis.read(b); //Ê×ÏÈ°ÑfisµÄÄÚÈİ¶Áµ½×Ö½ÚÊı×ébÀïÃæ
+        //        fos.write(b);//ÔÙ°Ñ×Ö½ÚÊı×ébµÄÄÚÈİÍ¨¹ıÊä³öÁ÷Ğ´µ½Ö¸¶¨ÎÄ¼ş
+        //¹Ø±ÕÁ÷
         fos.close();
         fis.close();
     }

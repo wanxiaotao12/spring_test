@@ -9,7 +9,7 @@ import java.util.Properties;
 /**
  * Created by wanxiaotao on 7/11/15.
  */
-public class PropertyTest {
+public class SpringPropertyTest {
     @Test
     public void testPropertiesFactoryBean(){
         ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext("resource/properties.xml");

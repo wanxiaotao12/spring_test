@@ -6,27 +6,27 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * ä¸€ç»„çº¿ç¨‹äº’ç›¸ç­‰å¾…ï¼Œç›´åˆ°åˆ°è¾¾æŸä¸ªå…¬å…±å±éšœç‚¹ï¼Œ ç„¶ååŒæ—¶æ‰§è¡Œ
+ * Ò»×éÏß³Ì»¥ÏàµÈ´ı£¬Ö±µ½µ½´ïÄ³¸ö¹«¹²ÆÁÕÏµã£¬ È»ºóÍ¬Ê±Ö´ĞĞ
  *
- * æˆ‘ä»¬ç§°ä¸ºã€barrierã€‘çŠ¶æ€
- * å½“æŸä¸ªçº¿ç¨‹è°ƒç”¨awaitæ–¹æ³•åï¼Œå½“å‰çº¿ç¨‹è¿›å…¥ã€barrierã€‘çŠ¶æ€
+ * ÎÒÃÇ³ÆÎª¡¾barrier¡¿×´Ì¬
+ * µ±Ä³¸öÏß³Ìµ÷ÓÃawait·½·¨ºó£¬µ±Ç°Ïß³Ì½øÈë¡¾barrier¡¿×´Ì¬
  *
- * å¯é‡å¤ä½¿ç”¨ï¼šå½“æ‰€æœ‰çº¿ç¨‹éƒ½è¾¾åˆ°ã€barrierã€‘çŠ¶æ€ï¼Œ CyclicBarrierå®ä¾‹å¯ä»¥å†æ¬¡ä½¿ç”¨
+ * ¿ÉÖØ¸´Ê¹ÓÃ£ºµ±ËùÓĞÏß³Ì¶¼´ïµ½¡¾barrier¡¿×´Ì¬£¬ CyclicBarrierÊµÀı¿ÉÒÔÔÙ´ÎÊ¹ÓÃ
  *
- * å‚è€ƒï¼šhttp://www.cnblogs.com/dolphin0520/p/3920397.html
+ * ²Î¿¼£ºhttp://www.cnblogs.com/dolphin0520/p/3920397.html
  *
- * CyclicBarrier ä¹Ÿå¯ä»¥æ¨¡æ‹Ÿï¼šä¸»çº¿ç¨‹ç­‰å¾…å­çº¿ç¨‹æ‰§è¡Œå®Œæ¯•åï¼Œ æ‰èƒ½å†æ‰§è¡Œ
+ * CyclicBarrier Ò²¿ÉÒÔÄ£Äâ£ºÖ÷Ïß³ÌµÈ´ı×ÓÏß³ÌÖ´ĞĞÍê±Ïºó£¬ ²ÅÄÜÔÙÖ´ĞĞ
  * Created by wanxiaotao on 5/12/15.
  */
 public class CyclicBarrierTest {
 
     @Test
     public void test() {
-//        CyclicBarrier barrier = new CyclicBarrier(3);
+        //        CyclicBarrier barrier = new CyclicBarrier(3);
         CyclicBarrier barrier = new CyclicBarrier(3, new Runnable() {
             @Override
             public void run() {
-                System.out.println("å½“å‰æ‰§è¡Œçº¿ç¨‹ï¼š" + Thread.currentThread().getName());
+                System.out.println("µ±Ç°Ö´ĞĞÏß³Ì£º" + Thread.currentThread().getName());
             }
         });
 
@@ -45,8 +45,8 @@ public class CyclicBarrierTest {
             e.printStackTrace();
         }
 
-        System.out.println("ä¸»çº¿ç¨‹æ‰§è¡Œ");
-        System.out.println("CyclicBarrieré‡ç”¨");
+        System.out.println("Ö÷Ïß³ÌÖ´ĞĞ");
+        System.out.println("CyclicBarrierÖØÓÃ");
 
         ThreadTest t3 = new ThreadTest("thread3", barrier);
         ThreadTest t4 = new ThreadTest("thread4", barrier);
@@ -96,7 +96,7 @@ public class CyclicBarrierTest {
             }
 
             try {
-                // await ä¹Ÿå¯ä»¥æŒ‡å®šç­‰å¾…æœ€é•¿æ—¶é—´ï¼Œå¦‚æœè¶…æ—¶ï¼Œåˆ™ä¼šä¸­æ­¢ç­‰å¾…ï¼Œç»§ç»­æ‰§è¡Œ
+                // await Ò²¿ÉÒÔÖ¸¶¨µÈ´ı×î³¤Ê±¼ä£¬Èç¹û³¬Ê±£¬Ôò»áÖĞÖ¹µÈ´ı£¬¼ÌĞøÖ´ĞĞ
                 cyclicBarrier.await();
 
             } catch (InterruptedException e) {
@@ -105,7 +105,7 @@ public class CyclicBarrierTest {
                 e.printStackTrace();
             }
 
-            System.out.println(Thread.currentThread().getName() + "æ¥ç»­æ‰§è¡Œ");
+            System.out.println(Thread.currentThread().getName() + "½ÓĞøÖ´ĞĞ");
 
         }
     }

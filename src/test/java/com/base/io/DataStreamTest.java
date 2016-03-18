@@ -11,20 +11,20 @@ public class DataStreamTest {
 
     @Test
     public void test() throws Exception{
-        // èŠ‚ç‚¹æµFileOutputStreamç›´æ¥ä»¥A.txtä½œä¸ºæ•°æ®æºæ“ä½œ
+        // ½ÚµãÁ÷FileOutputStreamÖ±½ÓÒÔA.txt×÷ÎªÊı¾İÔ´²Ù×÷
         FileOutputStream fileOutputStream = new FileOutputStream("A.txt");
 
-        // è¿‡æ»¤æµBufferedOutputStreamè¿›ä¸€æ­¥è£…é¥°èŠ‚ç‚¹æµï¼Œæä¾›ç¼“å†²å†™
+        // ¹ıÂËÁ÷BufferedOutputStream½øÒ»²½×°ÊÎ½ÚµãÁ÷£¬Ìá¹©»º³åĞ´
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(
                 fileOutputStream);
 
-        // è¿‡æ»¤æµDataOutputStreamè¿›ä¸€æ­¥è£…é¥°è¿‡æ»¤æµï¼Œä½¿å…¶æä¾›åŸºæœ¬æ•°æ®ç±»å‹çš„å†™
+        // ¹ıÂËÁ÷DataOutputStream½øÒ»²½×°ÊÎ¹ıÂËÁ÷£¬Ê¹ÆäÌá¹©»ù±¾Êı¾İÀàĞÍµÄĞ´
         DataOutputStream out = new DataOutputStream(bufferedOutputStream);
         out.writeInt(3);
         out.writeBoolean(true);
         out.flush();
         out.close();
-        // æ­¤å¤„è¾“å…¥èŠ‚ç‚¹æµï¼Œè¿‡æ»¤æµæ­£å¥½è·Ÿä¸Šè¾¹è¾“å‡ºå¯¹åº”ï¼Œè¯»è€…å¯ä¸¾ä¸€åä¸‰
+        // ´Ë´¦ÊäÈë½ÚµãÁ÷£¬¹ıÂËÁ÷ÕıºÃ¸úÉÏ±ßÊä³ö¶ÔÓ¦£¬¶ÁÕß¿É¾ÙÒ»·´Èı
         DataInputStream in = new DataInputStream(new BufferedInputStream(
                 new FileInputStream("A.txt")));
         System.out.println(in.readInt());

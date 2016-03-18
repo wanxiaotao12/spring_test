@@ -42,20 +42,21 @@ public class ResourceTest {
 //                Assert.assertTrue(r1.exists());
 
         Resource r2 = resourceLoader.getResource("file:d:/");
-        Assert.assertTrue(r2 instanceof UrlResource);
-        Assert.assertTrue(r2.exists());
+        logger.info("r2 instanceof UrlResource) =" + (r2 instanceof UrlResource));
+        logger.info("r2.exists() = " + r2.exists());
 
         Resource r3 = resourceLoader.getResource("http://www.baidu.com");
-        Assert.assertTrue(r3 instanceof UrlResource);
-        Assert.assertTrue(r2.exists());
+        logger.info("r3 instanceof UrlResource = " + (r3 instanceof UrlResource));
+        logger.info("r3.exists() = " + r3.exists());
 
         Resource r4 = resourceLoader.getResource("classpath:1.txt");
-        Assert.assertTrue(r4 instanceof ClassPathResource);
-        Assert.assertTrue(r4.exists());
+        logger.info("r4 instanceof ClassPathResource = " + (r4 instanceof ClassPathResource) );
+        logger.info("r4.exists() = " + r4.exists());
 
         logger.info(r4.getFilename());
 
         File file = r4.getFile();
+        logger.info("path =" + file.getAbsolutePath());
 
         Reader reader = new InputStreamReader(new BufferedInputStream(new FileInputStream(file)));
 

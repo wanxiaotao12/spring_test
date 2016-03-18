@@ -5,14 +5,14 @@ import java.util.concurrent.Semaphore;
 /**
  * Created by wanxiaotao on 5/12/15.
  *
- * å‚è€ƒï¼šhttp://www.cnblogs.com/dolphin0520/p/3920397.html
+ * ²Î¿¼£ºhttp://www.cnblogs.com/dolphin0520/p/3920397.html
  */
 public class SemaphoreTest {
 
 
     public static void main(String[] args) {
-        int N = 8; //å·¥äººæ•°
-        Semaphore semaphore = new Semaphore(5); //æœºå™¨æ•°ç›®
+        int N = 8; //¹¤ÈËÊı
+        Semaphore semaphore = new Semaphore(5); //»úÆ÷ÊıÄ¿
         for (int i = 0; i < N; i++) {
             new Worker(i, semaphore).start();
         }
@@ -33,9 +33,9 @@ public class SemaphoreTest {
         public void run() {
             try {
                 semaphore.acquire();
-                System.out.println("å·¥äºº" + this.num + "å ç”¨ä¸€ä¸ªæœºå™¨åœ¨ç”Ÿäº§...");
+                System.out.println("¹¤ÈË" + this.num + "Õ¼ÓÃÒ»¸ö»úÆ÷ÔÚÉú²ú...");
                 Thread.sleep(2000);
-                System.out.println("å·¥äºº" + this.num + "é‡Šæ”¾å‡ºæœºå™¨");
+                System.out.println("¹¤ÈË" + this.num + "ÊÍ·Å³ö»úÆ÷");
                 semaphore.release();
             } catch (InterruptedException e) {
                 e.printStackTrace();

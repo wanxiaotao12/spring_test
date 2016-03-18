@@ -22,7 +22,7 @@ public class MethodParam {
             Method writeMethod = descriptor.getWriteMethod();
             if(writeMethod!=null && writeMethod.getName().startsWith("set")) {
                 System.out.println("--------------------------------------");
-                System.out.println("methodName = " + writeMethod.getName() + "Ôºå ÂèÇÊï∞Ôºö");
+                System.out.println("methodName = " + writeMethod.getName() + "£¨ ≤Œ ˝£∫");
                 Type[] types = writeMethod.getGenericParameterTypes();
                 for(Type type : types) {
                     System.out.println(type);
